@@ -1,0 +1,10 @@
+
+
+select 'STM'          as  源系统标识名 ,
+       t1.table_name  as 数据平台源表主干名,
+       t3.COMMENTS as 源表中文名
+  from user_tables t1
+ inner join user_tab_comments t3
+    on t1.table_name = t3.table_name
+ order by t1.table_name ;
+
